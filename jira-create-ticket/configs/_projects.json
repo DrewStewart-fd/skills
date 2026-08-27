@@ -1,0 +1,13 @@
+{
+  "_defaults": {
+    "cloudId": "fandango.atlassian.net",
+    "note": "cloudId is the Fandango Atlassian site. All Fandango Jira projects share this one cloud. A project entry MAY override cloudId if it ever lives on a different site."
+  },
+  "TOMATORIAL": {
+    "name": "Rotten Tomatoes Editorial",
+    "aliases": ["tomatorial", "rt editorial", "editorial", "rt-editorial-v4", "rt-editorial"],
+    "defaultIssueType": "Story",
+    "learnedFrom": "rt-editorial jira skill port",
+    "learnedOn": "2026-08-27"
+  }
+}

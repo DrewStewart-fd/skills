@@ -1,0 +1,70 @@
+{
+  "Story": {
+    "fields": {},
+    "constraints": [
+      {
+        "type": "parentRequired",
+        "note": "Stories should be linked to a parent Epic. The epic key must exist — verify with the user before creating; a wrong/nonexistent key errors or auto-links to the wrong epic.",
+        "learnedFrom": "rt-editorial jira skill port",
+        "learnedOn": "2026-08-27"
+      }
+    ]
+  },
+  "transitions": {
+    "note": "Lifecycle transitions for TOMATORIAL. ALWAYS fetch getTransitionsForJiraIssue and match by to.name — the id fields here are hints only, never hardcode them. Transition screens may require fields the metadata reports as optional; those are listed under requiredFields and MUST be supplied or the transition 400s.",
+    "In Progress": {
+      "toName": "In Progress",
+      "idHint": "10171",
+      "requiredFields": {},
+      "trigger": "work begins on the ticket (branch cut, or user says start work). If already In Progress (Jira GitHub integration may auto-move on branch/PR link), do nothing."
+    },
+    "Code Review": {
+      "toName": "Ready for Code Review",
+      "idHint": "10549",
+      "trigger": "a PR is opened for the ticket.",
+      "fetchNote": "Fetch with expand: transitions.fields and includeUnavailableTransitions: true — the Code Review transition may not appear in the short list.",
+      "requiredFields": {
+        "customfield_14226": {
+          "name": "QA Notes",
+          "fieldType": "adf",
+          "note": "REJECTS a plain string ('Operation value must be an Atlassian Document'). Wrap in ADF doc. Content per templates/qa-notes.md: numbered test steps for user-facing changes, or 'Covered by regression.' when nothing is user-testable.",
+          "learnedFrom": "rt-editorial jira skill port",
+          "learnedOn": "2026-08-27"
+        },
+        "customfield_13504": {
+          "name": "Covered Information Data Inventory",
+          "fieldType": "multiselect",
+          "note": "PII checklist. Reported optional by metadata but the transition 400s without it. Default 'No Impact' for changes touching no personal data; pick matching option(s) from allowedValues if PII is involved.",
+          "default": [{ "id": "14310" }],
+          "allowedValues": [
+            { "id": "14310", "value": "No Impact" }
+          ],
+          "learnedFrom": "rt-editorial jira skill port",
+          "learnedOn": "2026-08-27"
+        }
+      }
+    },
+    "Blocked": {
+      "toName": "Blocked",
+      "requiredFields": {},
+      "trigger": "work is stuck on an external dependency."
+    },
+    "Stop Work": {
+      "toName": "To Do",
+      "requiredFields": {},
+      "trigger": "work stops; return to backlog."
+    },
+    "Close": {
+      "toName": "Closed",
+      "requiredFields": {
+        "resolution": {
+          "name": "Resolution",
+          "fieldType": "select",
+          "note": "Closing requires a resolution. Done = { id: '10000' }.",
+          "default": { "id": "10000" }
+        }
+      },
+      "trigger": "work is complete and verified."
+    }
+  }
+}
