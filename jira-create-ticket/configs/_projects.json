@@ -9,5 +9,40 @@
     "defaultIssueType": "Story",
     "learnedFrom": "rt-editorial jira skill port",
     "learnedOn": "2026-08-27"
+  },
+  "GRINS": {
+    "name": "Gringotts",
+    "aliases": ["gringotts", "account"],
+    "defaultIssueType": "Bug",
+    "learnedFrom": "a11y accessibility bug report ticket batch",
+    "learnedOn": "2026-09-01"
+  },
+  "GRINSINTL": {
+    "name": "GrinsIntl",
+    "aliases": ["gringotts-intl", "gringotts intl", "account intl"],
+    "defaultIssueType": "Bug",
+    "learnedFrom": "a11y accessibility bug report ticket batch",
+    "learnedOn": "2026-09-01"
+  },
+  "TAKE2": {
+    "name": "Fandango Take 2",
+    "aliases": ["take-2", "take 2"],
+    "defaultIssueType": "Bug",
+    "learnedFrom": "a11y accessibility bug report ticket batch",
+    "learnedOn": "2026-09-01"
+  },
+  "TAKEINTL": {
+    "name": "TakeIntl",
+    "aliases": ["take-intl", "take intl"],
+    "defaultIssueType": "Bug",
+    "learnedFrom": "a11y accessibility bug report ticket batch",
+    "learnedOn": "2026-09-01"
+  },
+  "ONECART": {
+    "name": "OneCart",
+    "aliases": ["one-cart-client", "one cart", "onecart"],
+    "defaultIssueType": "Bug",
+    "learnedFrom": "a11y accessibility bug report ticket batch",
+    "learnedOn": "2026-09-01"
   }
 }

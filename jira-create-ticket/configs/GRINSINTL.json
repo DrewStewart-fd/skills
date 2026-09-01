@@ -1,0 +1,98 @@
+{
+  "Bug": {
+    "fields": {
+      "customfield_10838": {
+        "name": "Steps to Reproduce",
+        "required": true,
+        "fieldType": "adf",
+        "learnedFrom": "a11y accessibility bug report ticket batch",
+        "learnedOn": "2026-09-01",
+        "note": "Metadata reports textarea but API rejects plain string - requires real ADF orderedList content"
+      },
+      "customfield_14239": {
+        "name": "Method of Testing",
+        "required": true,
+        "fieldType": "select",
+        "allowedValues": [
+          {
+            "id": "15618",
+            "value": "Manual"
+          },
+          {
+            "id": "15619",
+            "value": "Automation"
+          },
+          {
+            "id": "15620",
+            "value": "Known Issue"
+          }
+        ],
+        "learnedFrom": "a11y accessibility bug report ticket batch",
+        "learnedOn": "2026-09-01"
+      },
+      "customfield_14627": {
+        "name": "Environment(s) Reported",
+        "required": true,
+        "fieldType": "multiselect",
+        "allowedValues": [
+          {
+            "id": "16948",
+            "value": "INT"
+          },
+          {
+            "id": "16949",
+            "value": "STG"
+          },
+          {
+            "id": "16950",
+            "value": "PROD"
+          },
+          {
+            "id": "16951",
+            "value": "DARK"
+          },
+          {
+            "id": "16952",
+            "value": "DEV"
+          },
+          {
+            "id": "16953",
+            "value": "QA"
+          }
+        ],
+        "learnedFrom": "a11y accessibility bug report ticket batch",
+        "learnedOn": "2026-09-01"
+      },
+      "customfield_14336": {
+        "name": "Development Team(s)",
+        "required": false,
+        "fieldType": "multiselect",
+        "note": "Not required by metadata but used to tag owning team(s) per relationship table",
+        "allowedValues": [
+          {
+            "id": "15870",
+            "value": "Web Blue"
+          },
+          {
+            "id": "17027",
+            "value": "Websters"
+          },
+          {
+            "id": "17014",
+            "value": "Webslingers"
+          }
+        ],
+        "learnedFrom": "a11y accessibility bug report ticket batch",
+        "learnedOn": "2026-09-01"
+      }
+    },
+    "constraints": [
+      {
+        "type": "parentRequired",
+        "note": "Epic GRINSINTL-86 used for Account intl a11y bugs",
+        "learnedFrom": "a11y accessibility bug report ticket batch",
+        "learnedOn": "2026-09-01"
+      }
+    ]
+  }
+}
